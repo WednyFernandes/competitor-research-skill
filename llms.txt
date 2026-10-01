@@ -1,0 +1,21 @@
+# competitor-research-skill
+
+> Open-source Agent Skill (SKILL.md) for Claude Code, invoked as /concorrentes, that runs a self-expanding competitor analysis. It reads the current repo's README, PRODUCT and ROADMAP, then sweeps the Meta Ad Library (Facebook/Instagram ads) in the browser, WebSearch, Google Play and App Store listings and competitor landing pages. Every advertiser, cited name, "best apps" article, shared feature and adjacent product becomes a new search term until a full round finds no new competitor. It ends with pivots, positioning, risks and decisions, written to docs/CONCORRENTES.md.
+
+## Files
+- [SKILL.md](https://github.com/WednyFernandes/competitor-research-skill/blob/master/skills/concorrentes/SKILL.md): the skill itself (context, sources, expansion loop, per-competitor fields, analysis, output)
+- [README](https://github.com/WednyFernandes/competitor-research-skill/blob/master/README.md): install, usage, steps, sample output, FAQ
+
+## Install
+- Any agent: `npx skills add WednyFernandes/competitor-research-skill`
+- Global command: copy SKILL.md to `~/.claude/commands/concorrentes.md`
+- Project skill: copy SKILL.md to `.claude/skills/concorrentes/SKILL.md`
+
+## Key facts
+- Usage: `/concorrentes [niche | country | known names]`; with no argument it infers the niche from the repo
+- Requires Claude Code with a browser (desktop app built-in browser or Claude in Chrome), WebSearch and WebFetch; headless scrapers get a 403 from the Meta Ad Library
+- Expansion loop runs at least 3 rounds and stops only when a round finds no new name
+- Signals: an ad running 60+ days = a converting creative; 10k+ downloads with reviews = real distribution
+- Output: docs/CONCORRENTES.md (new section on top, history preserved, source list) plus a chat summary of at most 10 lines; it does not commit without asking
+- Written in Portuguese, Brazil-focused defaults (BRL prices, country=BR)
+- License: MIT. Author: Wedny Fernandes (github.com/WednyFernandes)

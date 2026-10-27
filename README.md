@@ -1,3 +1,17 @@
+---
+name: Concorrentes
+name_en: Competitor Research Skill
+type: Tool
+status: no-ar
+line: "Skill pra Claude Code que varre Ad Library, Google Play e App Store até parar de achar concorrente novo, e termina em pivôs e decisões."
+line_en: "A Claude Code skill that sweeps the Ad Library, Google Play and the App Store until no new competitor turns up, and ends in pivots and decisions."
+link: https://github.com/WednyFernandes/competitor-research-skill
+cta: github
+site: true
+year: 2026
+tags: [claude-code, agent-skill]
+---
+
 # Competitor Research Skill: self-expanding competitor analysis for Claude Code
 
 ![Competitor research skill for Claude Code: Meta Ad Library, Google Play and App Store competitor analysis that ends in pivots and decisions](assets/hero.png)
